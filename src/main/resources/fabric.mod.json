@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "basketball",
+  "version": "${version}",
+  "name": "Basketball 2K Style",
+  "description": "Basketball, hoop and scoring for Minecraft.",
+  "authors": [
+    "You"
+  ],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.example.basketball.BasketballMod"
+    ],
+    "client": [
+      "com.example.basketball.BasketballClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "fabric-api": "*"
+  },
+  "mixins": [
+    {
+      "config": "basketball.mixins.json",
+      "environment": "client"
+    },
+    {
+      "config": "physique.mixins.json"
+    }
+  ]
+}
